@@ -1,0 +1,5 @@
+wbpy includes Indicators API and Climate API. The World Bank Indicators API lets you programmatically access more than 8,000 indicators and query the data in several ways, using parameters to specify your request. Many data series date back 50 years, and can be used to create interesting applications.
+In fact it allows us to search for various datasets and analyze them. Climate API allows us to get dataset about climate in different places and times.\
+
+
+I could use that information to create a statistics of growing electricity demand in developing countries and share this statistics with people who work in this sphere.
