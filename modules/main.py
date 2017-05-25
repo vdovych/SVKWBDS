@@ -1,24 +1,21 @@
 from datstruct import DataChain
+import random
 
-with open("Saved_data.txt","rb") as f:
+with open("Saved_data.txt", "rb") as f:
     Dat = DataChain()
     Dat.load(f.read())
 
+year, year1 = str(random.randrange(2001, 2016)), str(random.randrange(2001, 2016))
 
 formatedDat = list()
-for item in Dat.search('2012'):
-    if item._data[1]["2012"]:
-        formatedDat.append(item._data[1]["2012"])
-formatedDat.sort()
-for it in formatedDat:
-    if(it>1000000000 and it.is_integer()):
-        print(it)
-print("12123412314212432314")
+for item in Dat.search(year):
+    if item._data[1][year]:
+        formatedDat.append(item._data[1][year])
+
 formatedDat1 = list()
-for item in Dat.search('2002'):
-    if item._data[1]["2002"]:
-        formatedDat1.append(item._data[1]["2002"])
-formatedDat1.sort()
-for it in formatedDat1:
-    if(it>1000000000 and it.is_integer()):
-        print(it)
+for item in Dat.search(year1):
+    if item._data[1][year1]:
+        formatedDat1.append(item._data[1][year1])
+
+print("Differense between years {} and {} is ".format(year,year1),abs(sum(formatedDat) - sum(formatedDat1)))
+

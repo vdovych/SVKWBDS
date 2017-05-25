@@ -1,5 +1,4 @@
 import wbpy
-import pickle
 from dattype import Data
 from datstruct import DataChain
 api = wbpy.IndicatorAPI()
