@@ -8,4 +8,5 @@ total_population = "SP.POP.TOTL"
 
 dataset = api.get_dataset(total_population, iso_country_codes, date="2010:2012")
 
-print(dataset,dataset.as_dict(),dataset.api_url,dataset.indicator_name,dataset.countries)
+print(dataset, dataset.as_dict(), dataset.api_url, dataset.indicator_name, dataset.countries)
+
